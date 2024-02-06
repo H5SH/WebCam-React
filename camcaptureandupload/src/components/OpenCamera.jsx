@@ -19,10 +19,12 @@ function OpenCamera(){
             height: 720,
             facingMode: 'user'
         }}
+        mirrored
         >
             {({ getScreenshot }) => (
                 <button onClick={()=> {
                     setImage(getScreenshot())
+
                 }}>
                     Capture
                 </button>
