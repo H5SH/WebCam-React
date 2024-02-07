@@ -20,6 +20,11 @@ function OpenCamera(){
             facingMode: 'user'
         }}
         mirrored
+        onUserMediaError={()=>(
+            <div>
+                <p>No Camera Was Found</p>
+            </div>
+        )}
         >
             {({ getScreenshot }) => (
                 <button onClick={()=> {
